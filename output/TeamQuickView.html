@@ -1,5 +1,4 @@
-function createMainHTML(message) {
-    return `<!doctype html>
+<!doctype html>
     <html lang="en">
     
     <head>
@@ -29,7 +28,31 @@ function createMainHTML(message) {
             <row>
                 <div class="col-sm">
 
-                   ${message}
+                   <div class="col-sm">
+    <div class="card-header">Team Member</div>
+    <div class="card-body">
+    <h5 class="card-title">Simon Rennocks</h5>
+    <p class="card-text">Manager</p>
+    <p class="card-text">ID: 49762</p>
+    <p class="card-text">Email: simonrennocks@gmail.com</p>
+    <p class="card-text">Office number: Cleveland</p>
+    </div>
+    </div>
+
+</div>
+<div class="col-sm">
+    <div class="card-header">Team Member</div>
+    <div class="card-body">
+    <h5 class="card-title">Tyler Cain</h5>
+    <p class="card-text">Intern</p>
+    <p class="card-text">ID: 45972</p>
+    <p class="card-text">Email: tecain13@gmail.com</p>
+    <p class="card-text">School: U of U</p>
+    </div>
+    </div>
+
+</div>
+
     
                 </div>
                 <!--column 1-->
@@ -55,39 +78,4 @@ function createMainHTML(message) {
             crossorigin="anonymous"></script>
     </body>
     
-    </html>`
-};
-
-
-function createMessage(obj) {
-    let personnelInfo;
-    switch (obj.getRole()) {
-        case "Manager":
-            personnelInfo = `Office number: ${obj.getOfficeNumber()}`;
-            break;
-        case "Engineer":
-            personnelInfo = `Github username: ${obj.getGithub()}`;
-            break;
-        case "Intern":
-            personnelInfo = `School: ${obj.getSchool()}`;
-            break;
-    }
-    return `<div class="col-sm">
-    <div class="card-header">Team Member</div>
-    <div class="card-body">
-    <h5 class="card-title">${ obj.getName()}</h5>
-    <p class="card-text">${ obj.getRole()}</p>
-    <p class="card-text">ID: ${ obj.getId()}</p>
-    <p class="card-text">Email: ${ obj.getEmail()}</p>
-    <p class="card-text">${personnelInfo}</p>
-    </div>
-    </div>
-
-</div>\n`
-}
-
-module.exports = {
-    createMainHTML: createMainHTML,
-    createMessage: createMessage
-};
-
+    </html>

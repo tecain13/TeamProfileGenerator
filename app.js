@@ -12,13 +12,13 @@ let teamHTML = "";
 init();
 
 
-function init() {
+async function init() {
 
     let check = "Yes";
     do {
         try {
             let { name } = await inputName();
-            let { id } = await inputId();
+            let { id } = await inputID();
             let { email } = await inputEmail();
             let { role } = await inputRole();
 
@@ -43,7 +43,7 @@ function init() {
                 teamArray.push(intern);
             }
 
-            check = await addEmployee();
+            check = await additionalEmployee();
 
         }
 
@@ -51,9 +51,9 @@ function init() {
             console.log(err);
         }
 
-    } while (check.additionalEmployee === "Yes");
+    } while (check.otherEmployee === "Yes");
     iterateArray(teamArray);
-    createHTML(teamHTML);
+    generatePage(teamHTML);
 };
 
 
@@ -112,14 +112,14 @@ function inputUsername() {
     const username = inquirer.prompt([{
         type: "input",
         message: "Please enter the employee's Github username.",
-        name: "office",
+        name: "username",
     }])
 
     return username;
 };
 
 function inputSchool() {
-    const username = inquirer.prompt([{
+    const school = inquirer.prompt([{
         type: "input",
         message: "Please enter the employee's school/university.",
         name: "school",
@@ -133,11 +133,11 @@ function additionalEmployee() {
     const otherEmployee = inquirer.prompt([{
         type: "list",
         message: "Would you like to add another another employee?",
-        name = 'otheremployee',
+        name: "otherEmployee",
         choices: ['Yes', 'No']
     }]);
 
-    return additionalEmployee;
+    return otherEmployee;
 }
 
 function iterateArray(arr) {

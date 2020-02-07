@@ -11,13 +11,15 @@ function createMainHTML(message) {
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+            <script src="https://kit.fontawesome.com/e6646741c0.js" crossorigin="anonymous"></script>
     </head>
     
     
     <body>
     
         <section>
-            <div class="jumbotron jumbotron-fluid">
+            <div class="jumbotron jumbotron-fluid" style="background-color:darkseagreen">
                 <div class="container">
                     <h1 class="display-4" style="text-align: center; font-weight: bolder;">My Team</h1>
                 </div>

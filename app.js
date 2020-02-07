@@ -11,7 +11,6 @@ let teamHTML = "";
 
 init();
 
-
 async function init() {
 
     let check = "Yes";
